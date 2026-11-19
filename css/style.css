@@ -1,1 +1,819 @@
 
+/* LOGO BULAT BERPUTAR */
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    border: 4px solid white;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+
+    animation: putarLogo 8s linear infinite;
+}
+
+/* ANIMASI PUTAR 360 DERAJAT */
+
+@keyframes putarLogo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+body {
+    background: #fff8ef;
+    color: #4b2e1e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+navbar {
+    background: #a94f19;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar h2 {
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 400px;
+    background: linear-gradient(120deg, #f9b45c, #e87827);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #783813;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #4b260f;
+}
+
+.about, .produk, .kontak {
+    padding: 55px 7%;
+    text-align: center;
+}
+
+.about h2, .produk h2, .kontak h2 {
+    color: #a94f19;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.about p {
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+.produk-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #0002;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: #a94f19;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.harga {
+    color: #d65b16;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.kontak p {
+    margin: 12px 0;
+}
+
+.footer {
+    background: #783813;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+
+/* HERO LEBIH MENARIK */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
+    padding: 100px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background:
+        radial-gradient(circle at 15% 20%,
+        #ffc46d 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%,
+        #ff761d 0%, transparent 35%),
+        linear-gradient(135deg,
+        #ffb34f, #ed711f);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 7vw, 55px);
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 8px rgba(100,40,0,0.2);
+}
+
+.hero p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.hero-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.hero-info span {
+    background: rgba(255,255,255,0.2);
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #71300e;
+    color: white;
+    padding: 17px 35px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(90,35,0,0.25);
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #4f2009;
+    transform: translateY(-4px);
+}
+
+/* HIASAN LINGKARAN */
+
+.hero-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.circle-one {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+    left: -80px;
+}
+
+.circle-two {
+    width: 320px;
+    height: 320px;
+    bottom: -130px;
+    right: -100px;
+}
+
+.hero-star {
+    position: absolute;
+    color: rgba(255,255,255,0.7);
+    font-size: 45px;
+}
+
+.star-one {
+    top: 18%;
+    right: 15%;
+}
+
+.star-two {
+    bottom: 20%;
+    left: 12%;
+    font-size: 60px;
+}
+
+.star-three {
+    top: 65%;
+    right: 8%;
+    font-size: 25px;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 650px;
+        padding: 80px 20px;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
+}
+
+/* KONTAK BARU */
+
+.contact {
+    padding: 65px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff5e9, #ffe0bd);
+}
+
+.contact h2 {
+    color: #a64b18;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #65412d;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 25px;
+    border-radius: 35px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-btn span {
+    font-size: 23px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+}
+
+.wa {
+    background: #20b95a;
+    box-shadow: 0 5px 15px #20b95a55;
+}
+
+.mail {
+    background: #a64b18;
+    box-shadow: 0 5px 15px #a64b1855;
+}
+
+.contact-footer {
+    margin-top: 45px;
+    color: #a64b18;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+@media (max-width: 500px) {
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-btn {
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+
+    .contact h2 {
+        font-size: 27px;
+    }
+}
+
+/* NAVBAR KEMBALI SEPERTI SEMULA */
+
+.navbar {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+    padding: 15px 10px 25px;
+
+    background: #a64b18;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    box-shadow: none;
+}
+
+/* LOGO BULAT DI TENGAH */
+
+.navbar .logo {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid white;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+
+    animation: putarLogo 8s linear infinite;
+}
+
+/* ANIMASI LOGO */
+
+@keyframes putarLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* MENU NAVIGASI */
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffd28c;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 500px) {
+    .navbar .logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 15px;
+    }
+}
+
+/* BACKGROUND PRODUK UNGU MUDA */
+
+#produk {
+    background: linear-gradient(
+        135deg,
+        #f3e5ff,
+        #e6ccff,
+        #f8edff
+    );
+
+    padding: 70px 20px;
+}
+
+/* JUDUL PRODUK */
+
+#produk h2 {
+    color: #873fbd;
+}
+
+/* KARTU PRODUK TETAP PUTIH */
+
+#produk .product-card {
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(120, 70, 160, 0.15);
+}
+
+/* WARNA TULISAN PRODUK */
+
+#produk h2 {
+    color: #B45CE8;
+    font-weight: bold;
+    text-shadow: 1px 2px 5px rgba(180, 92, 232, 0.18);
+}
+
+/* TULISAN PENDUKUNG PRODUK */
+
+#produk p {
+    color: #8950B5;
+}
+
+/* WARNA TULISAN PESAN SEKARANG */
+
+#produk .product-card .btn {
+    color: #B45CE8 !important;
+    font-weight: bold;
+}
+
+/* BACKGROUND KONTAK UNGU TERANG */
+
+#kontak {
+    background: linear-gradient(
+        135deg,
+        #EBD5FF,
+        #D9B5FF,
+        #F2E5FF
+    ) !important;
+
+    padding: 65px 20px;
+}
+
+/* JUDUL KONTAK */
+
+#kontak h2 {
+    color: #A044D6;
+}
+
+/* DESKRIPSI KONTAK */
+
+#kontak p {
+    color: #8040AD;
+}
+
+/* TEKS FOOTER */
+
+#kontak .contact-footer {
+    color: #9145C5;
+}
+
+/* HERO - CIRENG CRISPY MANTUL UNGU */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #E9C5FF 0%, transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            #D59AFF 0%, transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #C77DFA,
+            #A94FE0,
+            #D9A5FF
+        ) !important;
+}
+
+/* TULISAN UTAMA */
+
+.hero h1 {
+    color: #FFFFFF;
+    text-shadow: 2px 4px 8px rgba(80, 30, 120, 0.25);
+}
+
+/* DESKRIPSI */
+
+.hero p {
+    color: #FFFFFF;
+}
+
+/* LABEL */
+
+.hero-label {
+    background: rgba(255,255,255,0.25);
+    color: #FFFFFF;
+}
+
+/* TOMBOL */
+
+.hero .btn {
+    background: #873BB8;
+    color: #FFFFFF;
+}
+
+.hero .btn:hover {
+    background: #682A96;
+}
+
+/* =================================
+   TEMA UNGU SELURUH WEBSITE
+================================= */
+
+/* BERANDA */
+#beranda,
+.hero {
+    background: linear-gradient(
+        135deg,
+        #C77DFA,
+        #B56AE8,
+        #DDB5FF
+    ) !important;
+}
+
+/* TENTANG */
+#tentang {
+    background: linear-gradient(
+        135deg,
+        #EBD5FF,
+        #D7B5FF,
+        #F3E5FF
+    ) !important;
+}
+
+/* PRODUK */
+#produk {
+    background: linear-gradient(
+        135deg,
+        #F3E5FF,
+        #E6CCFF,
+        #DDB5FF
+    ) !important;
+}
+
+/* KONTAK */
+#kontak {
+    background: linear-gradient(
+        135deg,
+        #EBD5FF,
+        #D5A8FF,
+        #F2E5FF
+    ) !important;
+}
+
+/* WARNA JUDUL */
+#tentang h2,
+#produk h2,
+#kontak h2 {
+    color: #A044D6;
+}
+
+/* WARNA TULISAN */
+#tentang p,
+#produk p,
+#kontak p {
+    color: #70408F;
+}
+
+/* MENU NAVIGASI */
+.navbar {
+    background: #A94FE0 !important;
+}
+
+/* BACKGROUND KARTU PRODUK UNGU */
+.product-card {
+    background: linear-gradient(
+        135deg,
+        #F3E5FF,
+        #E8D2FF,
+        #DCC0FA
+    ) !important;
+
+    border: 2px solid #C084FC;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* GAMBAR CIRENG TETAP TERLIHAT JELAS */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* JUDUL PRODUK */
+.product-card h3 {
+    color: #7836A5;
+}
+
+/* DESKRIPSI PRODUK */
+.product-card p {
+    color: #684080;
+}
+/* BACKGROUND KARTU CIRENG UNGU */
+.product-card {
+    background: linear-gradient(135deg, #A020F0, #8000CC, #B04DFF) !important;
+    border: 2px solid #D8A5FF;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* GAMBAR TIDAK TERTUTUP */
+.product-card img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* TULISAN PRODUK */
+.product-card h3,
+.product-card p {
+    color: white !important;
+}
+
+/* EFEK GERAKAN CEMILAN FAVORIT SEMUA ORANG */
+.hero h1 {
+    animation: gerakJudul 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes gerakJudul {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* EFEK GERAKAN TULISAN DESKRIPSI */
+.hero p {
+    display: inline-block;
+    animation: gerakDeskripsi 2.5s ease-in-out infinite;
+}
+
+@keyframes gerakDeskripsi {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* EFEK GERAKAN TULISAN PRODUK KAMI */
+#produk h2 {
+    display: inline-block;
+    animation: gerakProduk 2s ease-in-out infinite;
+}
+
+@keyframes gerakProduk {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
